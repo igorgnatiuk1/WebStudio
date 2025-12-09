@@ -70,7 +70,11 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .header .container {
+    height: 60px;
+  }
 }
 
 .logo {
@@ -132,6 +136,13 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
 
 .header__item:not(:last-child) {
   margin-right: 51px;
@@ -148,8 +159,10 @@ h2 {
 }
 
 .header-open {
+  position: absolute;
+  top: 0;
+  right: 20px;
   display: block;
-  margin-left: auto;
   padding: 22px 0;
 }
 @media screen and (min-width: 768px) {
@@ -257,9 +270,10 @@ h2 {
 .mobile {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  width: 300px;
+  height: 360px;
+  border-bottom-left-radius: 50px;
   background-color: white;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -280,26 +294,20 @@ h2 {
 
 .mobile__list {
   font-family: Roboto;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 500;
   line-height: 1.8;
-}
-
-.mobile__box {
-  position: absolute;
-  bottom: 60px;
-  left: 40px;
-  right: 40px;
+  margin-bottom: 15px;
 }
 
 .mobile__adress--tel {
   display: block;
   font-family: Roboto;
-  font-size: 34px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.15;
   font-style: normal;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
@@ -317,14 +325,14 @@ h2 {
 
 .mobile__adress--mail {
   font-family: Roboto;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.17;
   font-style: normal;
 }
 
 .mobile__adress {
-  margin-bottom: 64px;
+  margin-bottom: 30px;
 }
 
 .mobile__network {
@@ -357,14 +365,12 @@ h2 {
   padding: 5px;
 }
 
-.mobile__network--link {
-  display: block;
-  padding: 5px;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.22;
-  padding: 10px;
+.mobile .social__link {
+  background-color: white;
+}
+
+.mobile .network {
+  fill: rgb(33, 150, 243);
 }
 
 .hero {
